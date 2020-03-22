@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../css/shopping-cart.css">
+		<link rel="stylesheet" type="text/css" href="../css/t/adapt.css"/>
+		<script type="text/javascript">
+			//定义全局变量
+			var i = 0;
+			//金额总和
+			var money = 0;
+			//计算合计价格
+			var cart_money = new Object();
+			//全部商品ID
+			var cart_id = new Object();
+			//备份商品ID，用于全选后去掉全选又再次全选
+			var cart_id_copy = new Object();
+		</script>
+	</head>
+
+	<body>
+		<div class="nav-bottom">
+			<div class="new-mine">
+				<div class="mine-photo min-photo-bgimg">
+					<img  src="../images/muwu.jpg" />
+					<h4>梨花下的梦</h4>
+					<ul class="mine-photo-list">
+						<li><a href="new-mine-grade.html"><p>我的等级</p><h4>普通用户</h4></a></li>
+						<li><p>待结算金额</p><h4>￥<label>1000</label></h4></li>
+						<li><p>已结算金额</p><h4>￥<label>8000</label></h4></li>
+					</ul>
+				</div>
+				
+				<div class="new-mine-title"><a href="#"><span class="icon iconfont icon-quanbudingdan"></span>全部订单</a></div>
+				<ul class="new-min-title-list">
+					<li><a href="new-mine-order.html"><span class="icon iconfont icon-daishenhe"></span>待审核</a></li>
+					<li><a href="new-mine-order1.html"><span class="icon iconfont icon-daifahuo"></span>待发货</a></li>
+					<li><a href="new-mine-order2.html"><span class="icon iconfont icon-daishouhuo"></span>待收货</a></li>
+				</ul>
+				
+				<div class="new-mine-title"><a href="new-mine-order3.html"><span class="icon iconfont icon-xiaoshou"></span>我的店铺</a></div>
+				<ul class="new-min-title-list">
+					<li><a href="new-mine-order4.html"><span class="icon iconfont icon-iconpay2"></span>待销售</a></li>
+					<li><a href="new-mine-order5.html"><span class="icon iconfont icon-daijiesuan"></span>待结算</a></li>
+					<li><a href="new-mine-order6.html"><span class="icon iconfont icon-yijiesuan"></span>已结算</a></li>
+					<li><a href="new-mine-order7.html"><span class="icon iconfont icon-huaduo"></span>退款售后</a></li>
+				</ul>
+				
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<a href="new-my-news.html" class="mui-navigate-right">
+							我的消息
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a href="new-address.html" class="mui-navigate-right">
+							地址管理
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right">
+							联系客服
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+
+	</body>
+
+</html>

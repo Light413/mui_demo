@@ -1,0 +1,47 @@
+
+.settle_box{ background:#fff;height: 50px;line-height: 50px; position:fixed; left:0px; bottom:50px; overflow:hidden;width: 100%;padding:0 0 0 4%;display: flex;justify-content: space-between;align-items: center;} 
+.settle_box .all_check{ width:17%;margin-bottom:0;padding: 0;margin: 0;}
+.settle_box .all_check span{ width:16px; height:16px; border:solid 1px #a2a2a2; vertical-align:middle; border-radius:50%;}
+.settle_box .all_check .disabled{ background:#e1e1e1;border:solid 1px #e1e1e1;}
+.settle_box .all_check  .pitch_on{ background:url(../images/s_goods_pitch.png) no-repeat center center #FC605A;border:solid 1px #FC605A; background-size:22px 22px; }
+#confirm_cart, #confirm_cart1{    
+    background: #fc605a;
+    color: #fff;
+    height: 100%;
+    padding: 8% 10%;
+    display: block;
+    width: 10rem;
+    text-align: center;
+    margin-left: 11%;
+    }
+#confirm_cart1{padding:0;}
+#confirm_cart1 {display: none;}
+.select .pitch_on{ background:url(../images/s_goods_pitch.png) no-repeat center center #FC605A;border:solid 1px #FC605A; background-size:22px 22px; }
+.account_info li{ overflow: hidden;position: relative; border-bottom:solid 1px #eee; padding: 0 4%;line-height: 45px; }
+.account_info li .info_name{color:#9a9a9a;float: left; display:inline-block;margin-right: 5%;color: #333; font-size: 0.7rem;}
+.all_check li{display: flex;align-items: center;}
+
+/*购物车*/
+.cart_top p { float: right; margin: 0; }
+.cart_top { padding: 12px 4%; background: #fff; font-size: 0.7rem; color: #999; line-height: 24px; border-bottom: solid 1px #e6e6e6; }
+.commodity_list { background: #fff; margin-bottom: 10px; }
+.shop_ul_bottom.account_info_box:nth-last-child(1) { border-bottom: none; }
+.commodity_list_term{padding: 0 2%;}
+.commodity_list .commodity_list_term li { border-top: solid 1px #e6e6e6; padding-right: 4%; position: relative; overflow: hidden; padding: 12px 0; }
+.commodity_list .commodity_list_term li em { position: absolute; width:16px; height: 16px; border: solid 1px #e6e6e6; border-radius: 50%; left: 0; top: 40px; }
+.commodity_list .commodity_list_term li img { width: 80px; height: 80px; max-width: 80px; max-height: 80px; float: left; margin-left: 28px; }
+.commodity_list .commodity_list_term li .div_center { width:69%; float: left; position: relative; margin-top: 7px; margin-left: 2%; }
+.commodity_list .commodity_list_term li .div_center h4 { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; color: #333; margin: 0; font-size: 0.9rem; margin-bottom: 2px; }
+.commodity_list .commodity_list_term li .div_center span { color: #afafaf; font-size: 0.6rem; }
+.commodity_list .commodity_list_term li .div_center p { margin: 0; font-size: 0.8rem; color: #FC605A; margin-top: 6px; font-family: "-apple-system","Helvetica Neue",Roboto,"Segoe UI",sans-serif; }
+.commodity_list .commodity_list_term li .div_right { position: absolute; bottom: 10px; right: 4%; border: solid 1px #e6e6e6; border-radius: 4px; width: 82px; overflow: hidden; text-align: center; line-height: 30px; }
+.commodity_list .commodity_list_term li .div_right i { float: left; width: 33%; color: #333; }
+.commodity_list .commodity_list_term li .div_right span { float: left; width: 33%; border-left: solid 1px #e6e6e6; border-right: solid 1px #e6e6e6; color: #333; }
+.shop_ul_bottom.account_info_box { margin-top: 0; border-top: solid 1px #e6e6e6; border-bottom: solid 1px #e6e6e6; }
+.shop_ul_bottom.account_info_box .xi_cu { height: 24px; line-height: 24px; padding: 0 6px; border-radius: 4px; background: #FC605A; color: #fff; margin-top: 11px; margin-right: 2%; }
+.settle_box .all_check em { font-weight: initial; font-size: 0.7rem; color: #666; margin-left: 4%; font-style: normal;}
+.commodity_list .commodity_list_term li .div_center p i { font-size: 0.6rem; }
+.commodity_list .commodity_list_term li .div_center p b { font-weight: initial; }
+.total_amount{display: flex;align-items: center;padding: 0;margin: 0;}
+.total_amount p{margin-bottom: 0;}
+.settle_box .total_amount b {font-weight: bold;color: #ff0900;font-size: 1.1rem;}

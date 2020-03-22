@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+		
+		<link rel="stylesheet" type="text/css" href="../../css/t/common.css"/>
+	</head>
+
+<body>
+<div  style="margin-top:0px;">
+	<ul id="list"  class="mui-table-view mui-grid-view mui-grid-9" style="padding: 5px;" v-cloak>
+		<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-6" style="border: #ddd 1px solid; border-radius: 3px; " v-for="item in items">
+			<div style="">
+				<a v-on:click="toDetailPage(item)">
+					<img  :src="item.icon"  style="height: 120px; width: 100%;"/>
+		
+					<div class="mui-ellipsis-2" style="height: 50px; overflow: hidden; color: #333; padding: 10px 0; font-size: 15px;">{{item.title}}</div>
+					<div class="pattern-list__p">
+						<p class="font-color-pink">￥<label>{{item.money}}</label></p>
+						<p>已售<label>{{item.sale}}</label></p>
+					</div>
+				</a>
+			</div>
+		</li>
+	
+	</ul>
+</div>
+			
+<script src="../../js/mui.min.js"></script>
+<script src="../../libs/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/l/open.page.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/l/base-data.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+var listv = new Vue({
+	el:'#list',
+	data:{
+		items:[]
+	},
+	methods:{
+		toDetailPage:function(e){
+			openNewPage('cai-details.html' , '详情' , true , {obj:e});
+		}
+	}
+})	;
+
+mui.plusReady(function () {
+    var wv = plus.webview.currentWebview();
+	var _id = wv.pType;
+	console.log(_id);
+	
+	var ds = SUB_MENU_DATA[_id];
+	listv.items = ds;
+})
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no , viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+	<link rel="stylesheet" type="text/css" href="css/icons-extra.css">
+	<!--自定义iconfont-->
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	
+	
+	<style type="text/css">
+		body {background-color: #efeff4;}
+		.mui-bar-tab .mui-tab-item.mui-active {color: #FF0000;}
+		.mui-title{color:#454545;font-weight: 450;}
+		* { touch-action: pan-y; } 
+	</style>
+</head>
+
+<body>
+	<nav class="mui-bar mui-bar-tab globe-color">
+		<a id="defaultTab" class="mui-tab-item mui-active" href="www/tab/tab1_home.html">
+			<span class="mui-icon iconfont icon-shouye"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		
+		<a class="mui-tab-item" href="www/tab/tab2_list.html">
+			<span class="mui-icon mui-icon-list"></span>
+			<span class="mui-tab-label">菜品</span>
+		</a>
+
+		<a class="mui-tab-item" href="www/tab/tab3_order.html">
+			<span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span>
+			<span class="mui-tab-label">订单</span>
+		</a>
+		<a class="mui-tab-item" href="www/tab/tab4_mine.html">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">个人中心</span>
+		</a>
+	</nav>
+		
+	<script src="js/mui.min.js"></script>
+	<script src="js/l/base-data.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		mui.init();	
+		var subpages = ['www/tab/tab1_home.html', 'www/tab/tab2_list.html', 'www/tab/tab3_order.html','www/tab/tab4_mine.html'];
+		
+		function navigationBarStyle(index){
+			var subpage_style = {top: '0px',bottom: '51px'};
+			var _titles = ['','菜品','订单','个人中心']
+			if(true || index == 0){
+				return subpage_style;
+			}else
+			if(index != 1){
+				subpage_style['titleNView'] = {
+					titleText:_titles[index] || '',
+					// titleColor:"#f5f5f5",       
+					titleSize:"18px",  
+					// height:'64px',
+					// backgroundColor: '#FF6225', 
+					splitLine:{// 标题栏控件的底部分割线，类似borderBottom
+						color:"#CCCCCC",             
+						height:"0px"  ,
+					},
+				};
+				
+				if(index == 0){
+					subpage_style['style']['background'] = '#fff';
+					return subpage_style;
+					
+				}else{
+					subpage_style['titleNView']['backgroundColor'] = '#FF4500';
+					subpage_style['titleNView']['titleColor'] = '#f5f5f5';
+				}
+				
+			}
+			
+			return subpage_style;
+		}
+		
+		var aniShow = {};
+		mui.plusReady(function() {
+			plus.navigator.setStatusBarStyle("dark");
+			plus.screen.lockOrientation("portrait-primary");
+			plus.navigator.closeSplashscreen();
+			plus.navigator.setFullscreen(false);
+			var self = plus.webview.currentWebview();
+			for (var i = 0; i < 5; i++) {
+				var temp = {};
+				var _style = navigationBarStyle(i);
+				var sub = plus.webview.create(subpages[i], subpages[i], _style);
+				if (i > 0) {
+					sub.hide();
+				}else{
+// 						temp[subpages[i]] = "true";
+// 						mui.extend(aniShow,temp);
+				}
+				self.append(sub);
+			}
+		});
+		
+		var activeTab = subpages[0];
+		var title = document.getElementById("title");
+		 //选项卡点击事件
+		mui('.mui-bar-tab').on('tap', 'a', function(e) {
+			var targetTab = this.getAttribute('href');
+			if (targetTab == activeTab)return;
+			// var t = this.querySelector('.mui-tab-label').innerHTML;
+			if(mui.os.ios||aniShow[targetTab]){
+				plus.webview.show(targetTab);
+			}else{
+				var temp = {};
+				temp[targetTab] = "true";
+				mui.extend(aniShow,temp);
+				plus.webview.show(targetTab,"none");
+			}
+
+			plus.webview.hide(activeTab);
+			activeTab = targetTab;
+		});
+			
+	</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../css/t/adapt.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/t/common.css"/>
+		<style>
+			.com{
+				top: 0px;
+				height: 60%;
+				background-color: #fff;
+			}
+			 .mui-table-view::after,.mui-table-view::before,.mui-table-view-cell::after{
+				height: 0;
+			}
+			
+			.mui-ellipsis-2{
+				-webkit-line-clamp: 3;
+				font-size: 16px;
+				text-indent: 0px;
+				color: #444;
+				/* line-height: 23px; */
+				/* #4d4b4a */
+			}
+			
+			.mui-slider-indicator.mui-segmented-control {
+				border-width: 0;
+			}
+			.mui-slider-indicator.mui-segmented-control .mui-control-item{
+				border-width: 0;
+			}
+			.mui-slider-indicator.mui-segmented-control .mui-control-item{
+				color: #666;
+				font-size: 17px;
+				padding: 8px 0;
+			}
+			.mui-slider-indicator.mui-segmented-control .mui-control-item.mui-active{
+				background-color: #fff;
+				color: #ff4500;
+				border-width: 0;
+				border-bottom: 2px solid #ff4500;
+			}
+		</style>
+	</head>
+
+	<body class="" style="background: #fff;">
+		<div class="mui-content" style="">
+			<ul id="list" class="mui-table-view">
+				<li class="mui-table-view-cell mui-media" v-for="item in items" style="padding-top: 15px; padding-bottom: 15px;">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" style="border-radius: 50%;margin-right: 20px;" src="../../images/cbd.jpg" >
+						<div class="mui-media-body">
+							<div> 匿名用户</div>
+							<p class="mui-ellipsis" style="margin-top: 5px;">味道不错</p>
+						</div>
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/l/base-data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../libs/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			mui.init({});
+			var listv = new Vue({
+				el:'#list',
+				data:{
+					items:[1,1,1,1,1,1]
+				},
+				methods:{
+					toDetailPage:function(e){
+						openNewPage('cai-details.html' , '详情' , true);
+					}
+				}
+			})	;
+			
+			
+			mui('.mui-scroll-wrapper').scroll({
+				scrollY: true,
+				deceleration: 0.0005, //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+				bounce: true ,//是否启用回弹
+				indicators:false
+			});
+			
+		</script>
+	</body>
+
+</html>

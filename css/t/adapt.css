@@ -1,0 +1,21 @@
+.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-nav
+{
+    height: 64px;
+    padding-top: 20px;
+}
+.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-nav ~ .mui-content
+{
+    padding-top: 64px;
+}
+.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-nav ~ .mui-content .mui-pull-top-pocket
+{
+    top: 64px;
+}
+.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-header-secondary
+{
+    top: 64px;
+}
+.mui-plus.mui-statusbar.mui-statusbar-offset .mui-bar-header-secondary ~ .mui-content
+{
+    padding-top: 94px;
+}

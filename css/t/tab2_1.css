@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*  */
+body {
+    min-height: 100%;
+    font: 400 14px/22px Arial, "Microsoft YaHei" !important;
+    margin: 0 auto !important;
+}
+
+em, footer, h1, h2, h3, h4, input, li, mark, nav, ol, p, section, span, textarea, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    list-style: none;
+    font-style: normal;
+}
+
+a {
+    outline-style: none;
+    text-decoration: none;
+}
+
+.head_wrapper, .wd_nav, body {
+    max-width: 640px;
+}
+
+.index_nav {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    z-index: 100;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    -webkit-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+}
+
+.wd_nav {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    z-index: 100;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+.index_nav .classify, .index_nav .contact, .index_nav .dynamic, .index_nav .store {
+    width: 25%;
+    height: 100%;
+}
+
+.dynamic {
+    position: relative;
+}
+
+.classify, .contact, .dynamic, .goshop, .store {
+    float: left;
+    padding-top: 8px;
+    background-size: 23px;
+    background-position: center 6px;
+    background-repeat: no-repeat;
+    font-size: 10px;
+    line-height: 10px;
+}
+
+/* 去除loading */
+.ui-loader-default {
+    display: none
+}
+
+.ui-mobile-viewport {
+    border: none;
+}
+
+.ui-page {
+    padding: 0;
+    margin: 0;
+    outline: 0
+}
+
+/* 菜单 */
+#main_plane {
+    /* padding-bottom: 50px; */
+    overflow: hidden;
+}
+
+.menu {
+    color: #A8A9AD !important;
+}
+
+.menus {
+    width: 27%;
+    float: left;
+    border-right: 1px solid #f0f0f0;
+    background: #f7f7f7;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.all_list {
+    float: left;
+    background: #fff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.menus li {
+    line-height: 1rem;
+    font-size: 18px;
+    text-align: center;
+    color: #999;
+    position: relative;
+}
+
+.menus .active {
+    background: #fff;
+    color: #4BCC60 !important;
+    display: block;
+}
+
+.title.active {
+    color: #4BCC60 !important;
+}
+
+.menus .active:before {
+    content: "";
+    width: 5px;
+    height: 0rem;
+    background-color: #4BCC60 !important;
+    position: absolute;
+    left: -0%;
+    top: 0%;
+}
+
+.menus .active:after {
+    content: "";
+    width: 1px;
+    height: 1rem;
+    background-color: #fff;
+    position: absolute;
+    right: -1px;
+    top: 0%;
+}
+
+/* 列表 */
+.title {
+    font-size: .35rem;
+    line-height: .8rem;
+    background: #f7f7f7;
+    padding-left: .5rem;
+    font-weight: bold;
+
+}
+
+.type li {
+    overflow: hidden;
+    margin: 0 .3rem;
+    padding: .3rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    height: 2rem;
+}
+
+.type li div {
+    /* float: left; */
+}
+
+.pic {
+    height: 80px;
+    width: 80px;
+    margin-right: 1%;
+    padding-top: .01rem;
+    position: relative;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.intro {
+    width: 69%;
+    padding-top: .3rem;
+    position: relative;
+}
+
+.intro p {
+    font-size: 14px;
+    line-height: .6rem;
+    height: 1.2rem;
+    color: #000;
+    display: -webkit-box; /*设置display，将对象作为弹性伸缩盒子模型显示*/
+    -webkit-line-clamp: 2; /*限制在一个块元素显示的文本的行数*/
+    -webkit-box-orient: vertical; /*规定框的子元素应该被水平或垂直排列*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eee {
+    color: #999;
+}
+
+
+.minus {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 1.2rem;
+    bottom: 0px;
+    z-index: 999;
+}
+
+
+.minu {
+    display: block;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #E3E3E3;
+    position: absolute;
+    right: 1.2rem;
+    bottom: 0px;
+    color: #4BCC60 !important;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* 下标 */
+.icon{
+    width: 22px;
+    height: 20px;
+    display: block;
+    margin: 0 auto 2px;
+    padding-bottom: 4px;
+    overflow: hidden;
+    background-size: 23px;
+}
+.icon img{
+    width:100%;
+}
+.wd_nav a{
+    color:#A7A8AB;
+    font-size:14px;
+}
+
+.classify a{
+    color: #4BCC60;
+}
+.rel{
+    position: relative;
+}
+

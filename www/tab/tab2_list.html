@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../css/t/adapt.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/t/common.css"/>
+		<style>
+			.mui-slider-indicator.mui-segmented-control {
+				border-width: 0;
+			}
+			.mui-slider-indicator.mui-segmented-control .mui-control-item{
+				border-width: 0;
+			}
+			.mui-slider-indicator.mui-segmented-control .mui-control-item{
+				color: #666;
+				font-size: 17px;
+				padding: 8px 0;
+			}
+			.mui-slider-indicator.mui-segmented-control .mui-control-item.mui-active{
+				background-color: #fff;
+				color: #ff4500;
+				border-width: 0;
+				border-bottom: 2px solid #ff4500;
+			}
+		</style>
+	</head>
+
+	<body class="mui-plus mui-statusbar mui-statusbar-offset" style="background: #fff;">
+		<header class="mui-bar mui-bar-nav seach-header">
+			<div style="display: flex; height: 28px;width: 70%;align-items: center;background-color: #fff; border-radius: 15px;margin-top: 10px; margin-left: 6%;padding-top: 5px;">
+				<i class="fdj  icon  iconfont icon-sousuo1" style="margin-left: 8px; font-size: 20px; color: #FF0000;"></i>
+				<input type="text" placeholder="请输入搜索内容"  style="margin-left: 3px; border-width: 0; height: 25px;margin-top: 13px; width: 80%; font-size: 14px;"/>
+				
+			</div>
+			<button class="" style="margin-left: 10px; height: 28px;margin-top: 8px;">搜索</button>
+		</header>
+		
+		<div style="padding: 10px 10px;margin-top: 60px;">
+			<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control">
+				<a id="tab_1" class="mui-control-item mui-active" href="#item1">点菜</a>
+				<a id="tab_2" class="mui-control-item" href="#item2">评价</a>
+				<a id="tab_3" class="mui-control-item" href="#item3">商家</a>
+			</div>
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/l/base-data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../libs/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			mui.init({});
+			var _style = {top: '140px',bottom: '0px' , background:'transparent'};
+			var _urls = ["../pages/tab2_1.html","../pages/tab2_2.html","../pages/tab2_3.html"];
+			
+			
+			mui.plusReady(function () {
+				////切换Tab
+				var currentIndex = 0
+				mui('#sliderSegmentedControl').on('tap' ,'.mui-control-item', function(e){
+					var id = this.getAttribute('id');
+					var s = id.substr(4,1) , i = parseInt(s) - 1;
+					if(currentIndex == i)return;
+					currentIndex = i;
+					
+					_showPage(_urls[i])
+				});
+				
+				_showPage(_urls[0]);
+				
+			   function _showPage(url){
+			   	var page = plus.webview.getWebviewById(url);
+			   	if(!page){
+			   		var w1 = plus.webview.create(url , url , _style);
+			   		page = w1;
+			   		plus.webview.currentWebview().append(w1);
+			   	}
+			   	
+			   	page.show();
+			   	page.addEventListener('loading' , function(){
+			   		plus.nativeUI.showWaiting();
+			   	});
+			   	page.addEventListener('loaded',function(){
+			   		plus.nativeUI.closeWaiting();
+			   	})
+			   } 
+			   
+			   
+			   
+			});
+			
+			
+			
+			
+			
+		</script>
+	</body>
+
+</html>

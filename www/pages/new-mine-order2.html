@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			.mui-control-content {
+				height: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的订单</h1>
+		</header>
+		<div class="mui-content new-min-order">
+			<ul>
+				<li>
+					<span class="time">2015-11-15 22:55:59</span>
+					<span class="state">待收货</span>
+				</li>
+				<li>
+					<img src="../images/list-ph01.png" />
+					<div class="flex1">
+						<h4>超级大品牌服装，现在够级大品牌服装，现在够买只要998</h4>
+						<p>颜色:<label class="mr-6">经典绮丽款</label>尺寸:<label>XL</label></p>
+						<h5 class="mui-text-right font-color-pink">￥<label>32.00</label></h5>
+						<p class="mui-text-right font-color-gray">x<label>3</label></p>
+					</div>
+				</li>
+				<li>
+					<span>商品总额</span>
+					<span class="font-color-gray">￥<label>94.00</label></span>
+				</li>
+				<li>
+					<button class="">订单详情</button>
+					<button class="">物流信息</button>
+					<button class="refund">申请退款</button>
+					<button class="payment">确认收货</button>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+		<style>
+			.item {
+				display: none;
+			}
+			
+			.show {
+				display: block;
+			}
+			.current{color: #f60;}
+		</style>
+	</head>
+
+	<body style="background: #fff;">
+		<header class="mui-bar mui-bar-nav seach-header classification">
+			<div class="top-sch-box flex-col">
+				<div class="centerflex">
+					<i class="fdj  icon  iconfont icon-sousuo1"></i>
+					<input type="text" placeholder="连衣裙就是你的女人味儿" class="sch-txt" />
+					<button class="search__button">搜索</button>
+				</div>
+			</div>
+
+		</header>
+		<div class="nav-bottom">
+			<div class="classification-list">
+				<!-- tab栏 -->
+				<div class="list-nav-tabs">
+					<ul id="tabs">
+						<li class="current"><a href="#" title="tab1">热门商品</a></li>
+						<li><a href="#" title="tab2">新款推荐</a></li>
+						<li><a href="#" title="tab3">预售款</a></li>
+						<li><a href="#" title="tab4">双肩包</a></li>
+						<li><a href="#" title="tab5">大包&小包</a></li>
+						<li><a href="#" title="tab6">钱包&手拿包</a></li>
+						<li><a href="#" title="tab7">单肩包&斜跨</a></li>
+						<li><a href="#" title="tab8">手提包</a></li>
+					</ul>
+				</div>
+				<!-- 对应显示内容 -->
+				<div id="content">
+					<div id="tab1" class="item show">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="tab2" class="item">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="tab3" class="item">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="tab4" class="item">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="tab5" class="item">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="tab6" class="item">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="tab7" class="item">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="tab8" class="item">
+						<ul class="pattern-list">
+							<li class="mui-card-footer">
+								<div class="mui-card">
+									<a href="new-personal-details.html">
+										<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../images/list-ph01.png" /></div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<p style="color: #333;">韩版青少年休闲修身长袖紧身衬衫</p>
+											</div>
+										</div>
+										<div class="pattern-list__p">
+											<p class="font-color-pink">￥<label>168</label></p>
+											<p>库存<label>538</label></p>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$('#tabs a').click(function(e) {
+					e.preventDefault();
+					$('#tabs li').removeClass("current").removeClass("hoverItem");
+					$(this).parent().addClass("current");
+					$("#content div").removeClass("show");
+					$('#' + $(this).attr('title')).addClass('show');
+				});
+
+				$('#tabs a').hover(function() {
+					if(!$(this).parent().hasClass("current")) {
+						$(this).parent().addClass("hoverItem");
+					}
+				}, function() {
+					$(this).parent().removeClass("hoverItem");
+				});
+			});
+		</script>
+	</body>
+
+</html>

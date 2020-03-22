@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>申请合作</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link href="../css/mui.picker.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+		
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">申请合作</h1>
+		</header>
+		<div class="new-address new-cooperation">
+			<p class="cooperation__p">注：请依次上传身份证正反面和营业执照</p>
+			<div class="together">
+			<!--    照片添加    -->
+				<div class="z_photo">
+					<div class="z_file">
+						<input type="file" name="file" id="file" value="" accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+					</div>
+					
+				</div>
+				
+				<!--遮罩层-->
+				<div class="z_mask">
+					<!--弹出框-->
+					<div class="z_alert">
+						<p>确定要删除这张图片吗？</p>
+						<p>
+							<span class="z_cancel">取消</span>
+							<span class="line-right"></span>
+							<span class="z_sure">确定</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>姓名：</label>
+					<input type="text" placeholder="请输入姓名">
+				</div>
+				<div class="mui-input-row">
+					<label>手机号：</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入手机号" data-input-clear="5"><span class="mui-icon mui-icon-clear mui-hidden"></span>
+				</div>
+				<div id="showCityPicker3">
+					<label>所在地区：</label>
+					<div id="cityResult3" class="ui-alert"></div>
+				</div>
+				<div class="mui-input-row">
+					<label>详细地址：</label>
+					<input type="text" class="mui-input-clear" placeholder="请输入详细地址" data-input-clear="5"><span class="mui-icon mui-icon-clear mui-hidden"></span>
+				</div>
+			</form>
+			
+			<form class="mui-input-group agree">
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label>同意协议</label>
+					<input name="checkbox" value="Item 2" type="checkbox" checked>
+				</div>
+				
+			</form>
+			
+		</div>
+		<div class="preservation"><a href="#">确认申请</a></div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<!--<script src="../js/mui.picker.min.js"></script>-->
+		<script src="../js/mui.picker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker3');
+					var cityResult3 = doc.getElementById('cityResult3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							cityResult3.innerText = "" + (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+		<script type="text/javascript">
+			function imgChange(obj1, obj2) {
+				//获取点击的文本框
+				var file = document.getElementById("file");
+				//存放图片的父级元素
+				var imgContainer = document.getElementsByClassName(obj1)[0];
+				//获取的图片文件
+				var fileList = file.files;
+				//文本框的父级元素
+				var input = document.getElementsByClassName(obj2)[0];
+				var imgArr = [];
+				//遍历获取到得图片文件
+				for(var i = 0; i < fileList.length; i++) {
+					var imgUrl = window.URL.createObjectURL(file.files[i]);
+					imgArr.push(imgUrl);
+					var img = document.createElement("img");
+					img.setAttribute("src", imgArr[i]);
+					var imgAdd = document.createElement("div");
+					imgAdd.setAttribute("class", "z_addImg");
+					imgAdd.appendChild(img);
+					imgContainer.appendChild(imgAdd);
+				};
+				imgRemove();
+			};
+
+			function imgRemove() {
+				var imgList = document.getElementsByClassName("z_addImg");
+				var mask = document.getElementsByClassName("z_mask")[0];
+				var cancel = document.getElementsByClassName("z_cancel")[0];
+				var sure = document.getElementsByClassName("z_sure")[0];
+				for(var j = 0; j < imgList.length; j++) {
+					imgList[j].index = j;
+					imgList[j].onclick = function() {
+						var t = this;
+						mask.style.display = "block";
+						cancel.onclick = function() {
+							mask.style.display = "none";
+						};
+						sure.onclick = function() {
+							mask.style.display = "none";
+							t.style.display = "none";
+						};
+
+					}
+				};
+			};
+			
+		</script>
+	</body>
+</html>

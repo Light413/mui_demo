@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+		
+		<style type="text/css">
+			/* common ui*/
+			 .mui-bar.mui-bar-tab{
+				background-color: #222;
+			}
+			/* .mui-bar-nav {
+			    top: 0;
+			    -webkit-box-shadow: 0 1px 2px #000;
+			    box-shadow: 0 1px 2px #000;
+			} */
+			.mui-bar.mui-bar-nav .mui-title{
+				color: #11c1f2;
+				font-size: 17px;
+				font-weight: 400;
+			}
+		</style>
+		
+		<link rel="stylesheet" type="text/css" href="../../css/t/adapt.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/t/auto.css"/>
+		
+	</head>
+	<body class="mui-plus mui-statusbar mui-statusbar-offset" style="background: #fff;">
+		<header class="mui-bar mui-bar-nav seach-header">
+			<div class="swiper-container bg-swiper swiper-no-swiping" style="font-size: 25px; text-align: center;color: #eee;">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide" v-for="(item,index) in bannerImgs" :style="{'background':item.ads_info}"></div>
+			    </div>
+			</div>
+			
+			<div class="box" style="width: 90%;font-size: 20px; text-align: center;color: #eee;">
+				<div class="animate" style="font-size: 18px;padding-top: 10px;">欢迎光临</div>
+		    </div>
+			
+		    <a class="btn">
+		        <span class="icon iconfont icon-xiaoxi"></span>
+		    </a>
+		</header>
+		<div class="" style="margin-top: 64px;">
+			<!--图片轮播-->
+			<div class="">
+				<a href="#"><img src="../../images/ig/homebanner.png" width="100%"></a>
+				<div style="font-size: 13px; color: #555;padding-left: 6px;padding-bottom: 3px;">
+					地址：重庆大学城东路20号重庆科技学院西门泡泡街 
+				</div>
+			</div>
+			<!--商品分类-->
+		<div class="mui-content new-pattern-con" style="margin-top: 0px;padding-top: 0;">
+		    <ul class="mui-table-view mui-grid-view mui-grid-12 pattern-con-icon">
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="rexiao">
+		                <span class="mui-icon iconfont icon-remenshangpin"></span>
+		                <div class="mui-media-body">热销</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="tuijian">
+		                <span class="mui-icon-extra mui-icon-extra-new"></span>
+		                <div class="mui-media-body">推荐</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="chuancai">
+		                <span class="icon iconfont icon-yushou-huang"></span>
+		                <div class="mui-media-body">川菜</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="xiangcai">
+		                <span class="icon iconfont icon-fendi_shuangjianbao"></span>
+		                <div class="mui-media-body">湘菜</div></a></li>
+						
+						
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="taocan">
+		                <span class="icon iconfont icon-dabaozhuang"></span>
+		                <div class="mui-media-body">套餐</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="chaofan">
+		                <span class="icon iconfont icon-qianbao"></span>
+		                <div class="mui-media-body">炒饭</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="xiaocai">
+		                <span class="icon iconfont icon-prada_danjianbao"></span>
+		                <div class="mui-media-body">小菜</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"><a id="yinliao">
+		                <span class="icon iconfont icon-gucci_shoutibao"></span>
+		                <div class="mui-media-body">饮料</div></a></li>
+		    </ul> 
+		</div>
+		
+		
+		<div class="new-pattern">
+			<div id="">
+				<h3 style="text-align: center; padding: 14px 0; padding-bottom: 5px;">今日新菜</h3> 
+				<p style="text-align: center; ">尽享美味，抢先一步</p>
+			</div>
+				<!-- <img class="w100" class="home-imgtit" src="../../images/hometit1.jpg" alt="" /> -->
+				<ul class="pattern-list">
+					<li class="mui-card-footer">
+						<div class="mui-card">
+							<!-- href="new-personal-details.html" -->
+							<a>
+								<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../../images/ig/c_danchaofan.jpg" /></div>
+								<div class="mui-card-content">
+									<div class="mui-card-content-inner">
+										<p id="title" style="color: #333;">虾仁炒饭</p>
+									</div>
+								</div>
+								<div class="pattern-list__p">
+									<p class="font-color-pink">￥<label>14</label></p>
+									<p>已售<label>100</label></p>
+								</div>
+							</a>
+						</div>
+						<div class="mui-card">
+							<a>
+								<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../../images/ig/c_dapanji.jpg" /></div>
+								<div class="mui-card-content">
+									<div class="mui-card-content-inner">
+										
+										<p id="title" style="color: #333;">火锅鸡</p>
+									</div>
+								</div>
+								<div class="pattern-list__p">
+									<p class="font-color-pink">￥<label>32</label></p>
+									<p>已售:<label>50</label></p>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="mui-card-footer">
+						<div class="mui-card">
+							<a>
+								<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../../images/ig/c_shuijiao.jpg" /></div>
+								<div class="mui-card-content">
+									<div class="mui-card-content-inner">
+										
+										<p id="title" style="color: #333;">水饺</p>
+									</div>
+								</div>
+								<div class="pattern-list__p">
+									<p class="font-color-pink">￥<label>16</label></p>
+									<p>已售:<label>8</label></p>
+								</div>
+							</a>
+						</div>
+						<div class="mui-card">
+							<a>
+								<div class="mui-card-header mui-card-media" style="height:40vw;"><img class="w100" src="../../images/ig/c_luroufan.jpg" /></div>
+								<div class="mui-card-content">
+									<div class="mui-card-content-inner">
+										
+										<p id="title" style="color: #333;">喷香卤肉饭</p>
+									</div>
+								</div>
+								<div class="pattern-list__p">
+									<p class="font-color-pink">￥<label>28</label></p>
+									<p>已售:<label>138</label></p>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/l/open.page.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/l/base-data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../libs/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+		 mui.init();
+
+		mui.plusReady(function () {
+			// plus.navigator.setStatusBarStyle("light");
+			// plus.navigator.setFullscreen(true);
+			mui('.mui-content').on('tap', 'a', function(e) {
+				var targetTab = '../pages/home-detail-list.html' //this.getAttribute('href');
+				var _id = this.id;
+				console.log("_id: " + JSON.stringify(_id));
+				var _title = $(this).find('div').text();
+				
+				openNewPage(targetTab , _title , true , {pType:_id});
+				
+			});
+			
+			//打开详情页
+			mui('.new-pattern').on('tap', 'a', function(e) {
+				var targetTab = '../pages/cai-details.html'
+				var _title = $(this).find('#title').text();
+				var obj = {};
+				if(_title == '虾仁炒饭'){
+					obj = {
+						title:'虾仁炒饭',
+						icon:'../../images/ig/c_danchaofan.jpg',
+						money:'20',
+						sale:'50'}
+				}else if(_title == '火锅鸡'){
+					obj = {
+						title:'火锅鸡',
+						icon:'../../images/ig/c_dapanji.jpg',
+						money:'20',
+						sale:'50'}
+				}else if(_title == '水饺'){
+					obj = {
+						title:'水饺',
+						icon:'../../images/ig/c_shuijiao.jpg',
+						money:'20',
+						sale:'50'}
+				}else if(_title == '喷香卤肉饭'){
+					obj = {
+						title:'喷香卤肉饭',
+						icon:'../../images/ig/c_luroufan.jpg',
+						money:'20',
+						sale:'50'}
+				}
+				
+				
+				
+				
+				
+				openNewPage(targetTab , _title , true,{obj:obj});
+				
+			});
+			
+			plus.webview.currentWebview().setStyle({scrollIndicator:'none'}); 
+			plus.screen.lockOrientation("portrait-primary");
+
+			$(".btn").click(function(){
+				openNewPage('../pages/message.html' , '消息中心' , true)
+			})
+		})
+		</script>
+	</body>
+
+</html>

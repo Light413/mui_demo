@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../css/shopping-cart.css">
+		
+	</head>
+	<body>
+		<ul class="new-add-address"  style="padding-top: 5px;">
+			<li style="height: 70px;">
+				<!-- href="new-buy.html" -->
+				<a >
+					<div class="disflex-between">
+						<span>收货人:<label>张</label></span>
+						<span>18368900682</span>
+					</div>
+					<div style="margin-top: 10px;">
+						<span>收货地址：上海市浦东新区莱阳路61号</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="add-ress__button" style="height: 40px;padding-top: 5px;"><a onclick="openPage()">添加新地址</a></div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/l/open.page.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			
+			function openPage(){
+				openNewPage('../pages/new-add-address.html' , '添加新地址' , true);
+			}
+			
+			
+		</script>
+	</body>
+</html>

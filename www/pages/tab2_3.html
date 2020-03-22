@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>商品详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/icons-extra.css">
+		<!--自定义iconfont-->
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="../../css/pro2.css">
+		<link rel="stylesheet" type="text/css" href="../../css/t/common.css"/>
+		<style type="text/css">
+			li{
+				padding-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body style="background: #fff;">
+
+		<div class="new-personal-details">
+			<!--图片轮播-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item">
+						<a href="#"><img src="../../images/banner1.jpg"></a>
+					</div>
+				</div>
+				<!-- <div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div> -->
+			</div>
+
+			<ul class="deails-con">
+				<li class="deails-con-title" style="font-size: 30px; font-weight: 600;">佳享餐馆</li>
+				<li class="deails-con-price">
+					<p>地址:</p> 重庆大学城东路20号重庆科技学院西门泡泡街 
+				</li>
+				<li>
+					<p>营业时间:</p>9：00 - 21：00  <span style="margin-left: 30px;">电话:13013440990</span>
+				</li>
+				
+				<li>
+					<p>营业执照:</p> <img src="../../images/ig/yingyezhizhao.png" style="height: 140px; width: 100%;" >
+				</li>
+				
+				<li>
+					<p>优惠活动:</p> <span style="color: #FF0000;">满20减5 ， 满30减10 </span>
+				</li>
+				
+				<li>
+					<p>其他：</p>可开发票 ， 可提前预定。
+				</li>
+			</ul>
+
+
+		</div>
+		
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				swipeBack: true
+			});
+			// var slider = mui("#slider");
+			// slider.slider({
+			// 	interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
+			// });
+		</script>
+		
+		<script type="text/javascript">
+			$(function() {
+				$(".clickwn").click(function() {
+					$(".flick-menu-mask").show();
+					$(".spec-menu").show();
+				})
+				$(".tclck").click(function() {
+					$(".flick-menu-mask").hide();
+					$(".spec-menu").hide();
+				})
+				$('#cool').bind('input propertychange', function() { /* alert(this.value);*/
+					$('.amount').html(this.value)
+				}).bind('input input', function() {});
+				$('#color a').click(function() {
+					var cook = $(this).index();
+					$('#color a').eq(cook).addClass('selected').siblings().removeClass('selected');
+				})
+
+			})
+		</script>
+	</body>
+
+</html>
